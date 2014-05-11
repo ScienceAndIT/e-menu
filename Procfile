@@ -1,1 +1,1 @@
-web: gunicorn emenu.wsgi
+web: newrelic-admin run-program gunicorn emenu.wsgi
