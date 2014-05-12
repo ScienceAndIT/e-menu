@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Artur says hello Heroku!")
+    return HttpResponse("<a href='http://www.scienceandit.net'>Artur</a> says hello Heroku!")
