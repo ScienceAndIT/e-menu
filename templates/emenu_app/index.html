@@ -7,6 +7,7 @@
         <h1>Artur says ...</h1>
         Hello Heroku! <strong>{{ boldmessage }}</strong><br />
         <a href='http://www.scienceandit.net'>Homepage</a>
+        {% load staticfiles %}
         <img src="{% static 'cherries.jpg' %}" alt="Picture of two cherries" />
     </body>
 </html>
