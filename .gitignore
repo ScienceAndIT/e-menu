@@ -1,2 +1,5 @@
 *.pyc
 staticfiles
+.gitignore~
+Procfile~
+.idea/
