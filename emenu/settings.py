@@ -4,9 +4,9 @@
 import os
 SETTINGS_DIR = os.path.dirname(__file__)
 
-#PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
-#PROJECT_PATH = os.path.abspath(PROJECT_PATH)
-PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))  # Heroku's tip
+PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+#PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))  # Heroku's tip
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 STATIC_PATH = os.path.join(PROJECT_PATH, 'static')
