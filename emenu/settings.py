@@ -142,6 +142,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'django.contrib.flatpages',
     'emenu_app',
+    'south',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
