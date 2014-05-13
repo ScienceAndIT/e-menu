@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
-#from django.conf.urls.static import static
-#from django.contrib.staticfiles import views
+from django.views.generic import TemplateView
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -11,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^$', 'emenu_app.views.index', name='index'),
     url(r'^add_error/$', 'emenu_app.views.add_error', name='add_error'),
     url(r'^menu/(?P<menu_name_url>\w+)/$', 'emenu_app.views.menu', name='menu'),
+    url(r'^robots\.txt$', include('robots.urls')),
     # url(r'^emenu/', include('emenu.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
