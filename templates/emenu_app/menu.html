@@ -13,8 +13,9 @@
                     <li>
                         <a href="{{ danie.url }}">{{ danie.title }}</a>
                         <h3>{{danie.description}}</h3>
-                        {% load staticfiles %}
-                        <img src="{% static {{danie.picture}} %}" alt="My image"/>
+                        {% if userprofile.picture %}
+	                        <img src="{{ danie.picture }}"  />
+	                    {% endif %}
 
 
                     </li>
