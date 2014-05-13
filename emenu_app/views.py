@@ -21,7 +21,7 @@ def menu(request, menu_name_url):
     context_dict = {'menu_name': menu_name}
     try:
         menu = Menu.objects.get(name=menu_name)
-        danies = Danie.objects.filter(menu=menu)
+        danies = Danie.objects.filter(menu=menu).order_by('title')
         paginator = Paginator(danies, 1)
         page = request.GET.get('page')
         try:
