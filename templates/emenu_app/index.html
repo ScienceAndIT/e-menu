@@ -4,10 +4,20 @@
         <title>E-menu</title>
     </head>
     <body>
-        <h1>Artur says ...</h1>
-        Hello Heroku! <strong>{{ boldmessage }}</strong><br />
-        <a href='http://www.scienceandit.net'>Homepage</a>
+        <h1>Welcome to our restaurant ...</h1>
+
+        {% if menus %}
+            <ul>
+                {% for menu in menus %}
+                <li>{{ menu.name }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no menus present.</strong>
+        {% endif %}
+
         {% load staticfiles %}
         <img src="{% static 'emenu_app/cherries.jpg' %}" alt="Picture of two cherries" />
+        <a href='http://www.scienceandit.net' target="_blank">Author's homepage</a>
     </body>
 </html>
