@@ -22,7 +22,7 @@ def menu(request, menu_name_url):
     try:
         menu = Menu.objects.get(name=menu_name)
         danies = Danie.objects.filter(menu=menu)
-        paginator = Paginator(danies, 2)
+        paginator = Paginator(danies, 1)
         page = request.GET.get('page')
         try:
             danies_paginated = paginator.page(page)
