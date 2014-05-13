@@ -11,8 +11,8 @@
             <ul>
                 {% for danie in danies %}
                     <li>
-                        <a href="{{ danie.url }}">{{ danie.title }}</a>
-                        <h3>{{danie.description}}</h3>
+                        <h2>{{ danie.title }}</h2>
+                        <h4>{{danie.description}}</h4>
                         {% if danie.picture %}
 	                        <img src="{{ danie.picture.url }}" alt="Oops, no image" />
                             <hr/>

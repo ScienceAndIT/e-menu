@@ -12,7 +12,6 @@ def index(request):
     for menu in menu_list:
         menu.url = menu.name.replace(' ', '_')
     return render_to_response('emenu_app/index.html', context_dict, context)
-    #return HttpResponse("<a href='http://www.scienceandit.net'>Artur</a> says hello Heroku!")
 
 
 def menu(request, menu_name_url):

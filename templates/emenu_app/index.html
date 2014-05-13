@@ -9,9 +9,9 @@
         {% if menus %}
             <ul>
                 {% for menu in menus %}
-                    {% if menu.all.count > 0 %}
+                    {% if menu %}
                         <li><a href="/menu/{{ menu.url }}">{{ menu.name }}</a></li>
-                    {%endif%}
+                    {% endif %}
                 {% endfor %}
             </ul>
         {% else %}
