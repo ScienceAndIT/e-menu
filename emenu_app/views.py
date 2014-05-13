@@ -7,7 +7,7 @@ from emenu_app.models import Menu, Danie
 
 def index(request):
     context = RequestContext(request)
-    menu_list = Menu.objects.all()
+    menu_list = Menu.objects.filter(danie__menu__isnull=False)
     context_dict = {'menus': menu_list}
     for menu in menu_list:
         menu.url = menu.name.replace(' ', '_')
