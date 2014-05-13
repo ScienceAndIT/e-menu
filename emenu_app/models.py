@@ -26,4 +26,4 @@ class Error(models.Model):
     email = models.EmailField(max_length=128)
 
     def __unicode__(self):
-        return self.name
+        return self.message
