@@ -11,7 +11,7 @@
         {% if menu %}
             {% if danies %}
             <ul>
-                {% for danie in danies %}
+                {% for danie in danies_paginated %}
                     <li>
                         <h2>{{ danie.title }}</h2>
                         <h4>{{danie.description}}</h4>
@@ -29,6 +29,23 @@
             {% endif %}
         <p><a href="/add_error/">Add an error message</a></p>
         <p><a href="/">Main page</a></p>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if danies_paginated.has_previous %}
+                    <a href="?page={{ danies_paginated.previous_page_number }}">previous</a>
+                {% endif %}
+
+            <span class="current">
+                Page {{ danies_paginated.number }} of {{ danies_paginated.paginator.num_pages }}.
+            </span>
+
+            {% if danies_paginated.has_next %}
+                <a href="?page={{ danies_paginated.next_page_number }}">next</a>
+            {% endif %}
+            </span>
+        </div>
+
         {% else %}
             The specified menu {{ menu_name }} does not exist!
         {% endif %}

@@ -5,6 +5,7 @@ from emenu_app.models import Menu, Danie
 from emenu_app.forms import ErrorForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 def index(request):
     context = RequestContext(request)
     menu_list = Menu.objects.filter(danie__menu__isnull=False).distinct()
@@ -21,6 +22,15 @@ def menu(request, menu_name_url):
     try:
         menu = Menu.objects.get(name=menu_name)
         danies = Danie.objects.filter(menu=menu)
+        paginator = Paginator(danies, 2)
+        page = request.GET.get('page')
+        try:
+            danies_paginated = paginator.page(page)
+        except PageNotAnInteger:
+            danies_paginated = paginator.page(1)
+        except EmptyPage:
+            danies_paginated = paginator.page(paginator.num_pages)
+        context_dict['danies_paginated'] = danies_paginated
         context_dict['danies'] = danies
         context_dict['menu'] = menu
     except Menu.DoesNotExist:
