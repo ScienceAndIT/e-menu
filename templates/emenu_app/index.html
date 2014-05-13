@@ -10,6 +10,7 @@
             <ul>
                 {% for menu in menus %}
                 <li>{{ menu.name }}</li>
+                <li><a href="/menu/{{ menu.url }}">{{ menu.name }}</a></li>
                 {% endfor %}
             </ul>
         {% else %}

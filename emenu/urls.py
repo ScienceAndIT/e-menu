@@ -8,7 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'emenu_app.views.index', name='index'),
-    url(r'^category/(?P<category_name_url>\w+)/$', 'emenu_app.views.menu', name='menu'),
+    url(r'^menu/(?P<menu_name_url>\w+)/$', 'emenu_app.views.menu', name='menu'),
     # url(r'^emenu/', include('emenu.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
