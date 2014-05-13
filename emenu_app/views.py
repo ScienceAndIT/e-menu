@@ -26,4 +26,4 @@ def menu(request, menu_name_url):
         context_dict['menu'] = menu
     except Menu.DoesNotExist:
         pass
-    return render_to_response('emnu_app/menu.html', context_dict, context)
+    return render_to_response('emenu_app/menu.html', context_dict, context)
