@@ -1,5 +1,6 @@
 h1, li, img, footer {
     margin: 0 auto;
+    width: 60%;
 }
 
 h2 {
@@ -13,8 +14,10 @@ h2 {
 
 .pagination {
     margin: 0 auto;
+    width: 60%;
 }
 
 .central {
     margin: 0 auto;
+    width: 60%;
 }
