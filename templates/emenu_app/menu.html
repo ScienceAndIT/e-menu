@@ -33,15 +33,15 @@
         <div class="pagination">
             <span class="step-links">
                 {% if danies_paginated.has_previous %}
-                    <a href="?page={{ danies_paginated.previous_page_number }}">previous</a>
+                    <a href="?page={{ danies_paginated.previous_page_number }}"><<</a>
                 {% endif %}
 
             <span class="current">
-                Page {{ danies_paginated.number }} of {{ danies_paginated.paginator.num_pages }}.
+                Page {{ danies_paginated.number }} of {{ danies_paginated.paginator.num_pages }}
             </span>
 
             {% if danies_paginated.has_next %}
-                <a href="?page={{ danies_paginated.next_page_number }}">next</a>
+                <a href="?page={{ danies_paginated.next_page_number }}">>>/a>
             {% endif %}
             </span>
         </div>
