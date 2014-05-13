@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
     <head>
         <title>E-menu</title>
+        <link href="{% static 'css/emenu.css' %}" rel="stylesheet">
     </head>
     <body>
         <h1>Welcome to our restaurant ...</h1>
@@ -18,7 +20,7 @@
             <strong>There are no menus present.</strong>
         {% endif %}
 
-        {% load staticfiles %}
+
         <img src="{% static 'emenu_app/cherries.jpg' %}" alt="Picture of two cherries" />
         <footer>
             <a href='http://www.scienceandit.net' target="_blank">&copy; A.Z.</a>
