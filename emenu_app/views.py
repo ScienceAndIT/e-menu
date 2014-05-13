@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from emenu_app.models import Menu, Danie
 from emenu_app.forms import ErrorForm
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
     context = RequestContext(request)
