@@ -10,7 +10,14 @@
             {% if danies %}
             <ul>
                 {% for danie in danies %}
-                <li><a href="{{ danie.url }}">{{ danie.title }}</a></li>
+                    <li>
+                        <a href="{{ danie.url }}">{{ danie.title }}</a>
+                        <h3>{{danie.description}}</h3>
+                        {% load staticfiles %}
+                        <img src="{% static {{danie.picture}} %}" alt="My image"/>
+
+
+                    </li>
                 {% endfor %}
             </ul>
             {% else %}
