@@ -9,7 +9,7 @@
         {% if menus %}
             <ul>
                 {% for menu in menus %}
-                    {% if menu.count() %}
+                    {% if menu.all.count %}
                         <li><a href="/menu/{{ menu.url }}">{{ menu.name }}</a></li>
                     {% endif %}
                 {% endfor %}
