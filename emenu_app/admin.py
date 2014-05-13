@@ -1,5 +1,5 @@
 from django.contrib import admin
-from emenu_app.models import Menu, Danie
+from emenu_app.models import Menu, Danie, Error
 
 
 class DanieAdmin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class DanieAdmin(admin.ModelAdmin):
 
 admin.site.register(Menu)
 admin.site.register(Danie, DanieAdmin)
+admin.site.register(Error)
