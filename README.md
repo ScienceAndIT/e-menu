@@ -1,2 +1,2 @@
-Basic version of online menu  
-Available <a href='www://e-menu.herokuapp.com'>here</a>
+<p>Basic version of online menu</p>  
+<p><a href="http://e-menu.herokuapp.com/">http://e-menu.herokuapp.com/</a></p>
