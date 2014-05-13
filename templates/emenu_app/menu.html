@@ -13,7 +13,7 @@
                     <li>
                         <a href="{{ danie.url }}">{{ danie.title }}</a>
                         <h3>{{danie.description}}</h3>
-                        {% if userprofile.picture %}
+                        {% if danie.picture %}
 	                        <img src="{{ danie.picture }}"  />
 	                    {% endif %}
 
