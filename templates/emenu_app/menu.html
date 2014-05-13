@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu</title>
+    </head>
+
+    <body>
+        <h1>{{ menu_name }}</h1>
+        {% if menu %}
+            {% if danies %}
+            <ul>
+                {% for danie in danies %}
+                <li><a href="{{ danie.url }}">{{ danie.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <strong>No dishes currently in menu.</strong>
+            {% endif %}
+        {% else %}
+            The specified menu {{ menu_name }} does not exist!
+        {% endif %}
+    </body>
+</html>

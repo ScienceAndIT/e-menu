@@ -12,3 +12,17 @@ def index(request):
     #context_dict = {'boldmessage': "I am bold font from the context"}
     return render_to_response('emenu_app/index.html', context_dict, context)
     #return HttpResponse("<a href='http://www.scienceandit.net'>Artur</a> says hello Heroku!")
+
+
+def menu(request, menu_name_url):
+    context = RequestContext(request)
+    menu_name = menu_name_url.replace('_', ' ')
+    context_dict = {'menu_name': menu_name}
+    try:
+        menu = Menu.objects.get(name=menu_name)
+        danies = Danie.objects.filter(menu=menu)
+        context_dict['danies'] = danies
+        context_dict['menu'] = menu
+    except Menu.DoesNotExist:
+        pass
+    return render_to_response('emnu_app/menu.html', context_dict, context)
