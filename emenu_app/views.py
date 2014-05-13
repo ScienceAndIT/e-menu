@@ -1,8 +1,8 @@
 # Create your views here.
-#from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from emenu_app.models import Menu, Danie
+from emenu_app.forms import ErrorForm
 
 
 def index(request):
@@ -26,3 +26,17 @@ def menu(request, menu_name_url):
     except Menu.DoesNotExist:
         pass
     return render_to_response('emenu_app/menu.html', context_dict, context)
+
+
+def add_error(request):
+    context = RequestContext(request)
+    if request.method == 'POST':
+        form = ErrorForm(request.POST)
+        if form.is_valid():
+            form.save(commit=True)
+            return index(request)
+        else:
+            print form.errors
+    else:
+        form = ErrorForm()
+    return render_to_response('emenu_app/add_error.html', {'form': form}, context)

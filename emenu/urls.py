@@ -9,6 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'emenu_app.views.index', name='index'),
+    url(r'^add_error/$', 'emenu_app.views.add_error', name='add_error'),
     url(r'^menu/(?P<menu_name_url>\w+)/$', 'emenu_app.views.menu', name='menu'),
     # url(r'^emenu/', include('emenu.foo.urls')),
 
