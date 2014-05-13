@@ -1,4 +1,4 @@
-h1 {
-    margin-left:auto;
-    margin-right:auto;
+h1, li, img {
+    margin-left:30%;
+    margin-right:30%;
 }
