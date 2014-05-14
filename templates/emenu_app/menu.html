@@ -10,20 +10,18 @@
         <h1>{{ menu_name }}</h1>
         {% if menu %}
             {% if danies %}
-            <ul>
+
                 {% for danie in danies_paginated %}
-                    <li>
+
                         <h2>{{ danie.title }}</h2>
                         <h4>{{danie.description}}</h4>
                         {% if danie.picture %}
 	                        <img src="{{ danie.picture.url }}" alt="Oops, no image" />
                             <hr/>
 	                    {% endif %}
-
-
-                    </li>
+                    
                 {% endfor %}
-            </ul>
+
             {% else %}
                 <strong>No dishes currently in menu.</strong>
             {% endif %}
