@@ -1,6 +1,7 @@
 h1, li, img, footer {
     margin: 0 auto;
     width: 60%;
+    text-align: center;
 }
 
 h2 {
