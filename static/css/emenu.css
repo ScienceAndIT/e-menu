@@ -4,10 +4,6 @@ h1, li, img, footer {
     text-align: center;
 }
 
-ul {
-    list-style-type: none;
-}
-
 h2 {
     color: blue;
 }

@@ -10,7 +10,7 @@
         <h1>{{ menu_name }}</h1>
         {% if menu %}
             {% if danies %}
-            <ul>
+            <ol>
                 {% for danie in danies_paginated %}
                     <li>
                         <h2>{{ danie.title }}</h2>
@@ -21,7 +21,7 @@
 	                    {% endif %}
                     </li>
                 {% endfor %}
-            </ul>
+            </ol>
             {% else %}
                 <strong>No dishes currently in menu.</strong>
             {% endif %}
