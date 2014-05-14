@@ -11,6 +11,7 @@ def index(request):
     menu_list = Menu.objects.filter(danie__menu__isnull=False).distinct()
     context_dict = {'menus': menu_list}
     for menu in menu_list:
+        menu.count_danie = Danie.objects.filter(menu=menu).count()
         menu.url = menu.name.replace(' ', '_')
     return render_to_response('emenu_app/index.html', context_dict, context)
 
